@@ -4,13 +4,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './components/home/Home';
 import Sell from './components/sell/Sell';
-
+import Loader from './components/loader/Loader';
 const Stack = createStackNavigator();
 export default function App() {
   return (
 
     <NavigationContainer>
     <Stack.Navigator>
+       <Stack.Screen name='loader' options={{headerShown:false}} component={Loader} />
       <Stack.Screen name='home' options={{headerShown:false}} component={Home} />
       <Stack.Screen name='vendre' options={{headerShown:false}} component={Sell} />
       {/* <Stack.Screen name="vente" component={DetailScreen} /> */}
