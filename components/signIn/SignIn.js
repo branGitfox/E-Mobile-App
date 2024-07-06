@@ -1,31 +1,19 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet , Image} from 'react-native';
 import xxx from '../../assets/xxx.png'
-const SignUp = ({navigation}) => {
+const SignIn = ({navigation}) => {
 
     const goto = () => {
-        navigation.navigate('signIn')
+        navigation.navigate('signUp')
     }
     return (
         <View style={styles.container}>
             <Image source={xxx} style={styles.image}/>
-            <Text style={styles.title} >S'inscrire</Text>
+            <Text style={styles.title} >Se Connecter</Text>
             <View style={styles.container2}>
-            <TextInput
-        style={styles.input}
-        placeholder="Nom"
-       
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Prénom"
+            
       
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Date de naissance (YYYY-MM-DD)"
-        inputMode='date'
-      />
+      
       <TextInput
         style={styles.input}
         placeholder="Email"
@@ -38,17 +26,12 @@ const SignUp = ({navigation}) => {
         
         secureTextEntry={true}
       />
-      <TextInput
-        style={styles.input}
-        placeholder="Confirmer le mot de passe"
-      
-        secureTextEntry={true}
-      />
+   
       <TouchableOpacity style={[styles.button, styles.buyNowButton]}>
             <Text style={styles.buttonText}>Soumettre</Text>
           </TouchableOpacity>
       <Text onPress={goto} style={styles.signInText}>
-        Déjà un compte ? Se connecter
+        Pas de compte ? S'inscrire
       </Text>
             </View>
         </View>
@@ -117,4 +100,4 @@ const styles = StyleSheet.create({
       }
 })
 
-export default SignUp;
+export default SignIn;
