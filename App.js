@@ -1,24 +1,31 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-// import { FontAwesome } from '@expo/vector-icons';
-import Header from './components/header/Header';
-import Search from './components/search/Search';
-import Filtre from './components/filtre/Filtre';
-import Product from './components/product/Product';
-import Footer from './components/footer/Footer';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Home from './components/home/Home';
+import Sell from './components/sell/Sell';
 
+const Stack = createStackNavigator();
 export default function App() {
   return (
-    <View>
-        <View>
-            <Header />
-            <Search />
-            <Filtre />
-            <Product />
-            <Footer />
-        </View>
-      <StatusBar style="auto" />
-    </View>
+
+    <NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen name='home' options={{headerShown:false}} component={Home} />
+      <Stack.Screen name='vendre' options={{headerShown:false}} component={Sell} />
+      {/* <Stack.Screen name="vente" component={DetailScreen} /> */}
+    </Stack.Navigator>
+  </NavigationContainer>
+    // <View>
+    //     <View>
+    //         <Header />
+    //         <Search />
+    //         <Filtre />
+    //         <Product />
+    //         <Footer />
+    //     </View>
+    //   <StatusBar style="auto" />
+    // </View>
   );
 }
 

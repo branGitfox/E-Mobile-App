@@ -26,7 +26,7 @@ const Product = () => {
 
 const styles = StyleSheet.create({
     cardContainer: {
-      backgroundColor: '#fff',
+      backgroundColor: '#f0f0f0',
       borderRadius: 10,
       margin: 10,
       padding: 10,

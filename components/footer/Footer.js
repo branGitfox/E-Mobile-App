@@ -2,14 +2,14 @@
 import { View, TouchableOpacity, StyleSheet } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
-const Footer = () => {
+const Footer = ({navigation}) => {
   return (
     <View style={styles.navBar}>
       <TouchableOpacity style={styles.navItem}>
         <FontAwesome name="home" size={35} color="green" />
       </TouchableOpacity>
       <TouchableOpacity style={styles.navItem}>
-        <FontAwesome name="money" size={35} color="black" />
+        <FontAwesome onPress={() => navigation.navigate('vendre')} name="money" size={35} color="black" />
       </TouchableOpacity>
       <TouchableOpacity style={styles.navItem}>
         <FontAwesome name="user" size={35} color="black" />
