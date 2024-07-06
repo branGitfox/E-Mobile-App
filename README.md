@@ -1,0 +1,4 @@
+-> First of all you need to install expo-cli #goto [expo-website]
+->install expo go on your device
+->You can run npx web if you want to view the page on you browser
+->run npx expo start for starting the server and scan the QR code
