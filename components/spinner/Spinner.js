@@ -17,7 +17,8 @@ const Spinner = ({navigation}) => {
           </View>
         )
     }
-    return navigation.navigate('home')
+
+    return navigation.navigate('signUp')
    
 }
 
