@@ -1,11 +1,29 @@
 import { View, Image, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
-
+import img1 from '../../assets/img1.avif'
+import img2 from '../../assets/img2.jpg'
 const Product = () => {
     return (
         <ScrollView style={styles.cardContainer}>
       <Image
-        source={{ uri: 'https://via.placeholder.com/150' }} // URL de l'image du produit
+        source={img1} 
+        style={styles.productImage}
+      />
+      <View style={styles.productDetails}>
+        <Text style={styles.productName}>Nom du Produit</Text>
+        <Text style={styles.productPrice}>MGA 10.000</Text>
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity style={[styles.button, styles.addToCartButton]}>
+            <Text style={styles.buttonText}><FontAwesome name='plus'/> Panier</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={[styles.button, styles.buyNowButton]}>
+            <Text style={styles.buttonText}><FontAwesome name='check'/> Acheter</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+
+      <Image
+        source={img2} 
         style={styles.productImage}
       />
       <View style={styles.productDetails}>
@@ -72,7 +90,7 @@ const styles = StyleSheet.create({
       width: '45%',
     },
     addToCartButton: {
-      backgroundColor: 'blue',
+      backgroundColor: 'blueviolet',
     },
     buyNowButton: {
       backgroundColor: 'green',
