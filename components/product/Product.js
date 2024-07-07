@@ -1,5 +1,5 @@
 import { View, Image, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
-
+import { FontAwesome } from '@expo/vector-icons';
 
 const Product = () => {
     return (
@@ -10,13 +10,13 @@ const Product = () => {
       />
       <View style={styles.productDetails}>
         <Text style={styles.productName}>Nom du Produit</Text>
-        <Text style={styles.productPrice}>$99.99</Text>
+        <Text style={styles.productPrice}>MGA 10.000</Text>
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={[styles.button, styles.addToCartButton]}>
-            <Text style={styles.buttonText}>Panier</Text>
+            <Text style={styles.buttonText}><FontAwesome name='plus'/> Panier</Text>
           </TouchableOpacity>
           <TouchableOpacity style={[styles.button, styles.buyNowButton]}>
-            <Text style={styles.buttonText}>Acheter</Text>
+            <Text style={styles.buttonText}><FontAwesome name='check'/> Acheter</Text>
           </TouchableOpacity>
         </View>
       </View>

@@ -10,9 +10,7 @@ const SignIn = ({navigation}) => {
         <View style={styles.container}>
             <Image source={xxx} style={styles.image}/>
             <Text style={styles.title} >Se Connecter</Text>
-            <View style={styles.container2}>
-            
-      
+            <View style={styles.container2}>             
       
       <TextInput
         style={styles.input}
@@ -28,7 +26,7 @@ const SignIn = ({navigation}) => {
       />
    
       <TouchableOpacity style={[styles.button, styles.buyNowButton]}>
-            <Text style={styles.buttonText}>Soumettre</Text>
+            <Text onPress={() => navigation.navigate('home')} style={styles.buttonText}>Soumettre</Text>
           </TouchableOpacity>
       <Text onPress={goto} style={styles.signInText}>
         Pas de compte ? S'inscrire
