@@ -1,8 +1,24 @@
-import { View, Image, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Image, Text, StyleSheet, TouchableOpacity, ScrollView, ActivityIndicator } from 'react-native';
+import { useState, useEffect } from 'react';
 import { FontAwesome } from '@expo/vector-icons';
 import img1 from '../../assets/img1.avif'
 import img2 from '../../assets/img2.jpg'
 const Product = () => {
+  const [isLoading, setIsLoading] = useState(true)
+
+    useEffect(() => {
+        setTimeout(() => {
+                setIsLoading(false)
+        }, 5000)
+    }, [])
+
+    if(isLoading){
+        return (
+            <View style={styles.container}>
+            <ActivityIndicator size="large" color="green" />
+          </View>
+        )
+    }
     return (
         <ScrollView style={styles.cardContainer}>
       <Image
@@ -98,6 +114,15 @@ const styles = StyleSheet.create({
     buttonText: {
       color: 'white',
       fontWeight: 'bold',
+    },
+
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      position:'absolute',
+      top:560,
+      width:'100%'
     },
   });
 
