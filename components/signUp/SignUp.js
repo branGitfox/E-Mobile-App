@@ -1,11 +1,18 @@
-import React from 'react';
+import React , {useState} from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet , Image} from 'react-native';
+// import DatePicker from 'react-native-datepicker-ios'; 
+import DateTimePicker from '@react-native-community/datetimepicker';
+
 import xxx from '../../assets/xxx.png'
 const SignUp = ({navigation}) => {
+
+  const [date, setDate] = useState(new Date());
+  const [showDatePicker, setShowDatePicker] = useState(false);
 
     const goto = () => {
         navigation.navigate('signIn')
     }
+
     return (
         <View style={styles.container}>
             <Image source={xxx} style={styles.image}/>
@@ -21,11 +28,17 @@ const SignUp = ({navigation}) => {
         placeholder="Prénom"
       
       />
-      <TextInput
-        style={styles.input}
-        placeholder="Date de naissance (YYYY-MM-DD)"
-        inputMode='date'
-      />
+    <Text style={styles.dateText}>Date de Naissance</Text>
+        <DateTimePicker
+          testID="dateTimePicker"
+         value={date}
+          mode="date"
+          display="default"
+          style={styles.date}
+
+          
+        />
+      
       <TextInput
         style={styles.input}
         placeholder="Email"
@@ -114,7 +127,21 @@ const styles = StyleSheet.create({
         color:'white',
         textAlign:'center',
         fontWeight:'bold'
+      },
+      date:{
+        position:'relative',
+        top:-10,
+        marginVertical:10,
+        width:'90%'
+      },
+      dateText:{
+        position:'relative',
+        top:30,
+        fontWeight:'bold',
+        left:10
       }
+
+  
 })
 
 export default SignUp;

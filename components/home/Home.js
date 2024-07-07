@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StyleSheet } from 'react-native';
 import { View } from 'react-native';
 import Header from '../header/Header';
@@ -8,6 +8,10 @@ import Product from '../product/Product';
 import Footer from '../footer/Footer';
 const Home = ({navigation}) => {
     
+    useEffect(() => {
+        alert('Vous etes connecter')
+    }, [])
+
     return (
        <View style={styles.container}>
             <Header/>

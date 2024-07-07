@@ -90,9 +90,7 @@ const styles = StyleSheet.create({
       position:'absolute',
       top:300,
       left:20,
-      height:480
-      
-      
+      height:480       
     },
     productImage: {
       width: '100%',
