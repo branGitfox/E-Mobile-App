@@ -9,7 +9,7 @@ const Footer = ({navigation}) => {
         <FontAwesome name="home" size={35} color="green" />
       </TouchableOpacity>
       <TouchableOpacity style={styles.navItem}>
-        <FontAwesome onPress={() => navigation.navigate('vendre')} name="money" size={35} color="black" />
+        <FontAwesome onPress={() => navigation.navigate('vendre')} name="dollar" size={35} color="black" />
       </TouchableOpacity>
       <TouchableOpacity style={styles.navItem}>
         <FontAwesome name="user" size={35} color="black" />

@@ -7,6 +7,7 @@ import Filtre from '../filtre/Filtre';
 import Product from '../product/Product';
 import Footer from '../footer/Footer';
 const Home = ({navigation}) => {
+    
     return (
        <View style={styles.container}>
             <Header/>
